@@ -1,0 +1,28 @@
+*{
+     color: white;
+}
+#container {
+     background-image: linear-gradient(to top, #046DA7 0%, #1CB9F0 100%, #ADE3FF 100%);
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     overflow: auto;
+}
+
+.logo {
+     text-align: center;
+     position: absolute;
+     right: 0;
+     left: 0;
+     top: 25%;
+}
+
+.buttons {
+     position: absolute;
+     bottom: 20%;
+     left: 0;
+     right: 0;
+     padding: 0 1rem;
+}

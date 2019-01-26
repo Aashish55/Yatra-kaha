@@ -1,0 +1,30 @@
+<nav>
+    <div id="sidenavTop">
+        <img src="/assets/yatrakaha.png" alt="" srcset="" style="background:#2cc7da;">
+        <h3>{{name}}</h3>
+        {{#if passenger}}
+            <h5>Passenger</h5>
+        {{/if}}
+        {{#if bus}}
+            <h5>Bus</h5>
+        {{/if}}
+    </div>
+    <ul>
+        {{#if passenger}}
+            <a href="/passenger/home"><li><i class="fas fa-home"></i> Home</li></a>
+            <a href="/passenger/recharge"><li><i class="fas fa-coins"></i> Recharge</li></a>
+            <a href="/passenger/paymentRequests"><li><i class="fas fa-money-check-alt"></i> Payment Requests</li></a>
+            <a href="/passenger/accountHistory"><li><i class="fas fa-book"></i> Account History</li></a>
+            <a href="/passenger/changePassword"><li><i class="fas fa-key"></i> Change Password</li></a>
+            <a href="/logout"><li><i class="fas fa-sign-out-alt"></i> Logout</li></a>
+        {{/if}}
+        {{#if bus}}
+            <a href="/bus/home"><li><i class="fas fa-home"></i> Home</li></a>
+            <a href="/bus/routes"><li><i class="fas fa-map"></i> My Routes</li></a>
+            <a href="/bus/issueInvoice"><li><i class="fas fa-file-invoice-dollar"></i> Issue Invoice</li></a>
+            <a href="/bus/accountHistory"><li><i class="fas fa-book"></i> Account History</li></a>
+            <a href="/bus/changePassword"><li><i class="fas fa-key"></i> Change Password</li></a>
+            <a href="/logout"><li><i class="fas fa-sign-out-alt"></i> Logout</li></a>
+        {{/if}}
+    </ul>
+</nav>

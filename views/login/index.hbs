@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Yatra Kaha</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@7.33.1/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+    <div id="container">
+        <div class="logo">
+            <img src="/assets/yatrakaha_full.png" style="width: 70%;max-width: 350px;">
+        </div>
+    
+        <section class="buttons">
+            <a href="/bus/login"><button class="btn btn-inverse btn-block">Login as Bus</button></a>
+            <a href="/passenger/login"><button class="btn btn-inverse btn-block">Login as Passenger</button></a>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.33.1/dist/sweetalert2.min.js"></script>
+
+    <script>
+        const Toast = Swal.mixin({
+        toast: true,
+        position: 'bottom-start',
+        showConfirmButton: false,
+        timer: 8000
+        });
+    </script>
+
+    {{> flash}}
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+<script>    
+    {{#each flash}}
+        Toast.fire({
+            type: '{{this.type}}',
+            title: '{{this.message}}'
+        })
+    {{/each}}
+</script>

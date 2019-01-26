@@ -1,0 +1,20 @@
+{{!< layout }}
+
+{{#extend "pageTitle"}}Payment Requests{{/extend}}
+
+{{#extend "content"}}
+<div class="card">
+    <h3>Pending Payments</h3>
+    {{#each payments}}
+    <div class="list">
+        <label>Bus ID: {{this.bus_id}}</label>
+        <label>Details: {{this.details}}</label>
+        <label>Amount: {{this.amount}} NPR</label>
+        <div style="text-align:right">
+            <a href="/passenger/payment/{{this.id}}/accept"><button class="btn btn-green">Accept</button></a>
+            <a href="/passenger/payment/{{this.id}}/reject"><button class="btn btn-red">Reject</button></a>
+        </div>
+    </div>
+    {{/each}}
+</div>
+{{/extend}}

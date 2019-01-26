@@ -1,0 +1,65 @@
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+input {
+    outline: none;
+}
+
+.btn {
+     padding: .5rem 1rem;
+     border: none;
+     border-radius: 4px;
+     margin: 0.5rem;
+     margin-bottom: 0;
+     box-sizing: border-box;
+     box-shadow: 0 10px 20px #057dc0, 0 6px 6px #057dc0;
+     font-weight: bold;
+}
+
+.btn-block {
+     width: 100%;
+     margin: 0.75rem auto auto;
+     display: block;
+}
+
+.btn-primary {
+     color: white;
+     background: #046DA7;
+}
+
+.btn-inverse {
+     color: #046DA7 !important;
+     background: #F8F9FB;
+}
+
+.inputGroup {
+     border-bottom: 1px solid #FAFAFA;
+     display: grid;
+     grid-template-columns: 36px auto;
+     padding: 0.75rem 0.25rem;
+     margin-bottom: 1rem;
+}
+
+.inputGroup i {
+    font-size: 28px;
+}
+
+.inputGroup:focus-within {
+    border-bottom: 3px solid #FAFAFA;
+}
+
+.inputGroup input {
+    background: none;
+    color:white;
+    font-size: 1rem;
+    border:none;
+    width: 100%;
+    height: 24px;
+    padding-left: 0.75rem;
+}
+
+.inputGroup input::placeholder{
+    color: #FFF;
+    opacity: 0.7;
+}

@@ -1,0 +1,25 @@
+{{!< layout }}
+
+{{#extend "pageTitle"}}Add Stops to Route{{/extend}}
+
+
+{{#extend "content"}}
+<div class="card">
+    <h3>Add Stops: </h3>
+    <form action="" method="post">
+        <label for="">Route: {{route.first_end}} - {{route.last_end}}</label>
+        <label for="">Stop Name:</label>
+        <input type="text" name="stop_name" id="" class="form-fields">
+        <button class="btn btn-block">Add Stop To Route</button>
+    </form>
+</div>
+
+<div class="card">
+    <h3>Stops Associated:</h3>
+    <ul>
+        {{#each busStops}}
+        <li>{{this.stop_name}}</li>
+        {{/each}}
+    </ul>
+</div>
+{{/extend}}

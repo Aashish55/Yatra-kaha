@@ -1,0 +1,44 @@
+<div class="overlay" onclick="toggleMenu();">
+    </div>
+
+    <script
+    src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    
+    <script
+    src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+    integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+    crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.33.1/dist/sweetalert2.min.js"></script>
+
+    <script>
+        function toggleMenu(){
+            $("nav").toggle("slide");
+            $(".overlay").fadeToggle(500);
+        }
+
+        const Toast = Swal.mixin({
+        toast: true,
+        position: 'bottom-start',
+        showConfirmButton: false,
+        timer: 8000
+        });
+    </script>
+
+    {{> flash}}
+
+    <script>
+        var currentLink = location.href;
+        var links = document.querySelectorAll("nav ul a");
+        for (var i = 0;i < links.length;i++){
+            if (currentLink.includes(links[i].href)){
+                links[i].firstChild.classList.add("active");
+                break;
+            }
+        }
+    </script>
+
+</body>
+</html>

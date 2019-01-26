@@ -1,0 +1,31 @@
+{{!< layout }}
+
+{{#extend "pageTitle"}}Issue Invoice{{/extend}}
+
+
+{{#extend "content"}}
+<div class="card">
+    <h3>Payment Request</h3>
+    <label>Passenger ID:</label>
+    <form action="" method="post">
+        <input type="text" name="passenger_id" class="form-fields">
+        <label>Pickup Point:</label>
+        <select name="from" id="" class="form-fields">
+            {{#each stops}}
+            <option value="{{this.stop_name}}">{{this.stop_name}}</option>
+            {{/each}}
+        </select>
+        <label>Destination:</label>
+        <select name="to" id="" class="form-fields">
+            {{#each stops}}
+            <option value="{{this.stop_name}}">{{this.stop_name}}</option>
+            {{/each}}
+        </select>
+        <label>Amount:</label>
+        <input type="text" name="amount" class="form-fields">
+
+        <label><input type="checkbox" name="discount"> Discount</label>
+        <button class="btn btn-block">Ask for Payment</button>
+    </form>
+</div>
+{{/extend}}
