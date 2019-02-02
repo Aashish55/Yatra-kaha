@@ -1,9 +1,9 @@
-*{
+* {
      color: white;
 }
 
 #container {
-     background-image: linear-gradient(to top, #046DA7 0%, #1CB9F0 100%, #ADE3FF 100%);
+     background: linear-gradient(to top, #046DA7 0%, #1CB9F0 100%, #ADE3FF 100%);
      position: fixed;
      top: 0;
      left: 0;

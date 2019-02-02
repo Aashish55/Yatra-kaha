@@ -1,13 +1,13 @@
 var jwt = require('jsonwebtoken');
 
-module.exports = (req, res, next)=>{
+module.exports = (req, res, next) => {
     var token = req.cookies.token || "";
 
     try {
         var userData = jwt.verify(token, secretKey);
         req.userData = userData;
         var sql = "";
-        if (userData.type == "passenger"){
+        if (userData.type == "passenger") {
             sql = "SELECT full_name as name, balance FROM passengers WHERE id=?";
             res.locals.passenger = true;
         } else {
@@ -15,7 +15,7 @@ module.exports = (req, res, next)=>{
             res.locals.bus = true;
         }
 
-        pool.query(sql, [userData.id], (err, rows)=>{
+        pool.query(sql, [userData.id], (err, rows) => {
             if (err) {
                 console.log(err);
                 req.flash("Database Error");
@@ -26,8 +26,8 @@ module.exports = (req, res, next)=>{
                 next();
             }
         });
-    } catch(err) {
-        req.flash("error","You are not authorized.");
+    } catch (err) {
+        req.flash("error", "You are not authorized.");
         res.redirect("/");
     }
 };

@@ -1,10 +1,4 @@
-{{!< layout }}
-
-{{#extend "pageTitle"}}Bus Routes{{/extend}}
-
-
-{{#extend "content"}}
-<div class="card">
+{{!< layout }} {{#extend "pageTitle"}} Bus Routes{{/extend}} {{#extend "content"}} <div class="card">
     <h3>Default Route</h3>
     <form action="/bus/routes/setDefault" method="post">
         <label>Select your current route:</label>
@@ -18,35 +12,25 @@
     <script>
         document.getElementById("route_id").value = "{{route_id}}";
     </script>
-</div>
-<div class="card">
-    <h3>Add Route</h3>
-    <form action="/bus/routes/add" method="post">
-        <label>First End:</label>
-        <input type="text" class="form-fields" name="first_end">
-        <label>Last End:</label>
-        <input type="text" class="form-fields" name="last_end">
-        <button class="btn btn-block">Add Route</button>
-    </form>
-</div>
-<div class="card">
-    <h3>My Routes:</h3>
-    <ul>
-        {{#each routes}}
-        <a href="/bus/routes/{{this.id}}/stops/add"><li>{{this.first_end}} - {{this.last_end}}</li></a>
-        {{/each}}
-    </ul>
-</div>
-{{!-- Passenger Home
-<button class="btn">Hello</button>
-<button class="btn btn-block">Hello</button>
-
-<input type="text" class="form-fields">
-<label>Hello</label>
-<select name="" id="" class="form-fields">
-    <option value="Kathmandu">Kathmandu</option>
-    <option value="Kathmandu">Kathmandu</option>
-    <option value="Kathmandu">Kathmandu</option>
-    <option value="Kathmandu">Kathmandu</option>
-</select> --}}
-{{/extend}}
+    </div>
+    <div class="card">
+        <h3>Add Route</h3>
+        <form action="/bus/routes/add" method="post">
+            <label>First End:</label>
+            <input type="text" class="form-fields" name="first_end">
+            <label>Last End:</label>
+            <input type="text" class="form-fields" name="last_end">
+            <button class="btn btn-block">Add Route</button>
+        </form>
+    </div>
+    <div class="card">
+        <h3>My Routes:</h3>
+        <ul>
+            {{#each routes}}
+            <a href="/bus/routes/{{this.id}}/stops/add">
+                <li>{{this.first_end}} - {{this.last_end}}</li>
+            </a>
+            {{/each}}
+        </ul>
+    </div>
+    {{/extend}}

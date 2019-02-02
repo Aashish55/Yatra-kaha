@@ -20,7 +20,9 @@ pool = mysql.createPool({
 app.use(cookieParser());
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({
+    extended: true
+}));
 
 app.use(express.static('public'))
 
@@ -28,7 +30,9 @@ app.use(session({
     secret: secretKey,
     resave: false,
     saveUninitialized: true,
-    cookie: { maxAge: 3000 }
+    cookie: {
+        maxAge: 3000
+    }
 }));
 app.use(require('flash')());
 
@@ -39,8 +43,9 @@ app.set('view engine', 'hbs');
 app.use('/', require('./routes/passengers'));
 app.use('/', require('./routes/bus'));
 app.use('/', require('./routes/index'));
+// app.get('/bus/login')
 
 
-app.listen(3000, ()=>{
-    console.log("Listening at 3000");
+app.listen(3000, () => {
+    console.log("Listening to the port : 3000");
 })
